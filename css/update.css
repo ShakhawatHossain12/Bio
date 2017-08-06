@@ -1,0 +1,66 @@
+body{
+	color:black;
+}
+.container-fluid{
+	background: darkcyan;
+    color: white;
+    height: 50px;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.headers{
+	margin-bottom: 0%;
+}
+.headers a{
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+}
+.headers a:hover{
+	color: white;
+	text-decoration: none;
+}
+.headers li{
+	line-height: 50px;
+	margin-right: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.headers li:hover{
+	background-color: white;
+	color: black;
+}
+.crud-nav{
+	margin-top: -1.5%;
+	color: black;
+	line-height: 50px;
+}
+.crud-table{
+	width: 100%;
+	height: 50px;
+}
+.crud-table,td{
+	border-collapse: collapse;
+}
+.crud-table td{
+	width: 33.43%;
+	text-align: center;
+	line-height: 50px;
+	color: black;
+	cursor: pointer;
+}
+.crud-table td:hover{
+	background-color:#CCCCFF;
+}
+label{
+	color: black;
+}
+#showInformationDiv{
+	color: black;
+	height: 100%;
+	/*background-color: darkcyan;*/
+	/*overflow:scroll;*/
+
+}
+

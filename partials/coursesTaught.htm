@@ -1,0 +1,15 @@
+<h2 style="text-align: center;">Courses Taught</h2>
+	<table class="table">
+		<tr>
+			<th>Title</th>
+			<th>Course Code</th>
+			<th>Year</th>
+			<th>Institution</th>
+		</tr>
+		<tr ng-repeat="course in courses">
+			<td>{{ course.$index +1 }}.&nbsp;&nbsp;&nbsp;{{ course.title }}</td>
+			<td>{{ course.courseCode }}</td>
+			<td>{{ course.year }}</td>
+			<td>{{ course.institution }}</td>
+		</tr>
+</table>

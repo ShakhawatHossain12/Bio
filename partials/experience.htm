@@ -1,0 +1,67 @@
+<section>
+	<h2 style="text-align: center;">Biography</h2>
+	<table class="table">
+		<tr>
+			<th>Date</th>
+			<th>Academic Rank</th>
+			<th>Department</th>
+		</tr>
+		<tr ng-repeat="bio in bios">
+			<td>{{ bio.date }}</td>
+			<td>{{ bio.academicRank }}</td>
+			<td>{{ bio.department }}, 
+			{{ bio.institute }}</td>
+		</tr>
+		<!-- <tr>
+			<td>August 2009 – March 2016</td>
+			<td>Professor (Assistant)</td>
+			<td>Dept. of Applied Physics, Electronics & Communication Engineering, 
+University of Chittagong, Bangladesh</td>
+		</tr>
+		<tr>
+			<td>August 2006 – August 2009</td>
+			<td>Lecturer</td>
+			<td>Dept. of Applied Physics, Electronics & Communication Engineering, 
+University of Chittagong, Bangladesh
+</td>
+		</tr> -->
+	</table>
+<br />
+<script type="text/javascript">
+	var app=angular.module('eduApp',[]);
+	app.controller('EducationController'function($scope,$http){
+		$http({
+			method:'GET',
+			url:'jsons/education.json'
+		}).then(function(success){
+			$scope.educations=success.data;
+			//$scope.bioses=$scope.$parent.bios;
+		}, function(error){
+
+		});
+	});
+</script>
+	<h2 style="text-align: center;">Education</h2>
+	<table class="table" ng-app="eduApp" ng-controller="EducationController">
+		<tr>
+			<th>Date</th>
+			<th>Degree</th>
+			<th>Institute</th>
+		</tr>
+		<tr ng-repeat="education in educations">
+			<td>{{ education.Date }}</td>
+			<td>{{ education.Degree }}</td>
+			<td>{{ education.Institute }}</td>
+		</tr>
+		<!-- <tr>
+			<td>September 2011 – December 2012</td>
+			<td>MPhil in Electrical and Electronic Engineering</td>
+			<td>The University of Manchester, School of Electrical and Electronic Engineering, Manchester, United Kingdom</td>
+		</tr> -->
+	</table>
+</section>
+
+
+
+
+
